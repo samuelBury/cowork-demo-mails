@@ -58,14 +58,12 @@
 
   <div class="content">
 
-    <!-- 0 -->
+    <!-- intro -->
     <section>
-      <h2><span class="n">0</span>La méthode la plus simple : ne rien importer</h2>
+      <h2><span class="n">→</span>Le principe</h2>
       <div class="callout c-best">
-        <div class="t">✅ Recommandé pour l'atelier — fonctionne avec TOUS les clients mail</div>
-        Vous n'êtes pas obligé d'importer les mails dans votre messagerie. Il suffit de <b>laisser les fichiers dans un dossier sur l'ordinateur</b> et de demander à Cowork de travailler dessus :
-        <br><br><i>« Voici un dossier de mails au format .eml. Classe-les en 4 catégories : Urgent, À répondre, À déléguer, Information. Présente un tableau. Ne réponds à rien sans mon accord. »</i>
-        <br><br>Aucun réglage, aucun risque pour vos vrais mails. <b>Choisissez l'import (sections ci-dessous) seulement si vous voulez les voir dans votre boîte mail habituelle.</b>
+        <div class="t">✅ But : travailler avec le connecteur mail</div>
+        On <b>importe ces boîtes de démo dans votre messagerie</b> (dans un dossier de test dédié), puis Claude Cowork les lit via le <b>connecteur mail</b> — comme avec vos vrais e-mails, mais sur des données 100 % factices. Suivez la section correspondant à votre client mail ci-dessous.
       </div>
     </section>
 
@@ -84,12 +82,12 @@
         <tr><td><b>Outlook classique</b> (Windows)</td><td class="ok">Oui</td><td>glisser les .eml dans un dossier</td></tr>
         <tr><td><b>Outlook</b> (Mac)</td><td class="ok">Oui</td><td>glisser les .eml dans un dossier local</td></tr>
         <tr><td><b>Thunderbird</b> (gratuit, Win/Mac)</td><td class="ok">Oui</td><td>.mbox ou .eml (module ImportExportTools NG)</td></tr>
-        <tr><td><b>Nouveau Outlook</b> / <b>Outlook Web</b></td><td class="no">Non (pas d'import fichier)</td><td>→ méthode « pont » ou lecture directe</td></tr>
-        <tr><td><b>Gmail</b> (web)</td><td class="no">Non (pas d'import fichier)</td><td>→ méthode « pont » ou lecture directe</td></tr>
+        <tr><td><b>Nouveau Outlook</b> / <b>Outlook Web</b></td><td class="no">Non (pas d'import fichier)</td><td>→ méthode « pont » Thunderbird</td></tr>
+        <tr><td><b>Gmail</b> (web)</td><td class="no">Non (pas d'import fichier)</td><td>→ méthode « pont » Thunderbird</td></tr>
       </table>
       <div class="callout c-warn">
         <div class="t">⚠️ Important</div>
-        Les webmails (Gmail, Outlook Web, nouveau Outlook) <b>ne permettent pas d'importer un fichier de mails</b>. Pour eux, utilisez soit la <b>méthode « pont » Thunderbird</b> (section 6), soit — bien plus simple — la <b>lecture directe du dossier</b> (section 0).
+        Les webmails (Gmail, Outlook Web, nouveau Outlook) <b>ne permettent pas d'importer un fichier de mails</b>. Pour les intégrer à ces comptes, utilisez la <b>méthode « pont » Thunderbird</b> (dernière section) : elle pousse les mails dans le compte via IMAP, où le connecteur Cowork les retrouve.
       </div>
     </section>
 
@@ -137,11 +135,7 @@
     <!-- Nouveau Outlook / web -->
     <section>
       <h2><span class="n">5</span>Nouveau Outlook &amp; Outlook Web <span class="tag web">navigateur / app récente</span></h2>
-      <p>Ces versions <b>n'ont pas d'import de fichiers</b>. Deux options :</p>
-      <ul>
-        <li><b>Le plus simple :</b> ne pas importer — laissez les <code>.eml</code> dans un dossier et pointez Cowork dessus (section 0).</li>
-        <li><b>Pour les voir dans la boîte :</b> utilisez la méthode « pont » Thunderbird (section 6), qui pousse les mails vers le compte via IMAP — ils apparaissent alors aussi dans le nouvel Outlook / Outlook Web.</li>
-      </ul>
+      <p>Ces versions <b>n'ont pas d'import de fichiers</b>. Pour intégrer les mails au compte, utilisez la <b>méthode « pont » Thunderbird</b> (section suivante) : elle pousse les mails vers le compte via IMAP — ils apparaissent alors dans le nouvel Outlook / Outlook Web, où le connecteur Cowork les lit.</p>
     </section>
 
     <!-- Gmail / pont -->
@@ -157,7 +151,7 @@
       </ol>
       <div class="callout c-warn">
         <div class="t">⚠️ Gmail &amp; sécurité</div>
-        Pour ajouter un compte Gmail à Thunderbird, la connexion se fait via la fenêtre Google habituelle (OAuth). <b>Le participant saisit lui-même ses identifiants</b> — ne les communiquez à personne. Si c'est trop lourd le jour J, restez sur la lecture directe du dossier (section 0).
+        Pour ajouter un compte Gmail à Thunderbird, la connexion se fait via la fenêtre Google habituelle (OAuth). <b>Le participant saisit lui-même ses identifiants</b> — ne les communiquez à personne.
       </div>
     </section>
 
@@ -169,7 +163,7 @@
         <li>Tout est <b>factice et anonyme</b> (clients A→F, références Ref-001→008, personnes fictives) : zéro donnée sensible.</li>
         <li>Mettez-les dans un <b>dossier de test dédié</b>, jamais mélangés à de vrais mails.</li>
         <li><b>Règle d'or maintenue :</b> on ne laisse rien partir sans validation humaine, même en test.</li>
-        <li>En cas de doute le jour J, la <b>section 0</b> (lecture directe du dossier) fonctionne avec absolument tout le monde.</li>
+        <li>Une fois importés, <b>connectez votre messagerie à Cowork</b> et ciblez le dossier de test : le connecteur mail fait le reste.</li>
       </ul>
     </section>
 
