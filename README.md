@@ -42,9 +42,26 @@ Le principe : **importez ces boîtes dans votre messagerie**, puis laissez Claud
 
 ---
 
+## 🎯 Travailler sur les mails de démo — pas sur vos vrais mails
+
+L'exercice doit se faire **uniquement sur les mails factices**. Trois réflexes pour ne jamais toucher à votre vraie boîte :
+
+1. **Importez dans un dossier dédié et clairement nommé** (ex. `Démo Cowork` ou `EA Pharma Démo`), séparé de votre boîte de réception et de vos autres dossiers.
+2. **Cadrez chaque prompt sur ce dossier.** Commencez vos demandes en nommant explicitement le dossier de démo et en interdisant le reste. Exemple :
+   > *« Travaille **uniquement** sur le dossier « Démo Cowork ». Ne lis pas, ne modifie pas et ne touche pas à ma boîte de réception ni à mes autres dossiers. Classe ces mails en 4 catégories… »*
+3. **Verrouillez les actions :** demandez explicitement à Cowork de **ne rien envoyer, déplacer ni supprimer** sans votre validation — il propose, vous validez.
+
+> 💡 Si votre connecteur mail permet de **limiter les dossiers accessibles**, restreignez-le au seul dossier de démo le temps de l'exercice.
+>
+> 🧹 **Après l'atelier**, supprimez le dossier `Démo Cowork` : vos vrais mails n'auront jamais été concernés.
+
+---
+
 ## 🧪 Prompts d'entraînement
 
-1. **Tri & priorisation** — *« Classe ces mails en 4 catégories, présente un tableau avec l'action recommandée. Ne réponds à rien sans mon accord. »*
+> Pensez à **préfixer chaque prompt** par : *« Travaille uniquement sur le dossier « Démo Cowork » »*.
+
+1. **Tri & priorisation** — *« Classe les mails de ce dossier en 4 catégories, présente un tableau avec l'action recommandée. Ne réponds à rien sans mon accord. »*
 2. **Pré-rédaction** — *« Pour les mails à répondre, rédige un brouillon dans mon ton (calibre-toi sur le dossier Envoyés). Présente chaque brouillon pour validation avant envoi. »*
 3. **Exploration** — *« Quels clients sont à risque ce mois-ci d'après ces mails ? »* · *« Liste tout ce qui concerne l'Espagne ou l'Italie. »*
 
