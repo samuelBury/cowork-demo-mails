@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutoriel — Importer les boîtes de démo dans votre messagerie</title>
+<style>
+  :root{--accent:#D97757;--accent-d:#B5532F;--ink:#201A17;--body:#43403B;--grey:#8C857D;
+        --card:#FAF8F5;--border:#E7E1D9;--dark:#2A2521;--blue:#3B6EA5;--green:#4F8A52;--gold:#C9933A;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Calibri","Segoe UI",system-ui,sans-serif;color:var(--body);background:#ECE7E0;line-height:1.55}
+  .doc{max-width:900px;margin:24px auto;background:#fff;box-shadow:0 12px 40px rgba(0,0,0,.12)}
+  .cover{background:linear-gradient(135deg,#2A2521,#3a322c);color:#fff;padding:38px 48px 30px;position:relative}
+  .cover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--accent)}
+  .cover .k{display:inline-block;background:var(--accent);font-weight:700;font-size:12px;padding:5px 12px;border-radius:6px;letter-spacing:.5px;margin-bottom:14px}
+  .cover h1{font-size:27px;line-height:1.15;margin-bottom:6px}.cover h1 .o{color:var(--accent)}
+  .cover p{color:#cfc3b6;font-size:15px;max-width:680px}
+  .content{padding:14px 48px 40px}
+  section{padding:20px 0;border-bottom:1px solid var(--border)}
+  section:last-child{border-bottom:none}
+  h2{color:var(--ink);font-size:20px;margin-bottom:10px;display:flex;align-items:center;gap:9px}
+  h2 .n{background:var(--dark);color:#fff;font-size:13px;font-weight:800;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+  h3{color:var(--ink);font-size:15.5px;margin:14px 0 4px}
+  p{font-size:14.5px;margin-bottom:9px}
+  b{color:var(--ink)}
+  ul,ol{margin:6px 0 10px 22px}li{margin:4px 0;font-size:14.5px}
+  code{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:1px 6px;font-family:Consolas,monospace;font-size:13px;color:var(--accent-d)}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13.5px}
+  th{background:var(--dark);color:#fff;text-align:left;padding:9px 11px;font-size:12.5px}
+  td{padding:9px 11px;border-bottom:1px solid var(--border);vertical-align:top}
+  tr:nth-child(even) td{background:var(--card)}
+  td.ok{color:var(--green);font-weight:700}
+  td.no{color:var(--accent-d);font-weight:700}
+  .callout{border-radius:10px;padding:14px 18px;margin:12px 0;font-size:14.5px}
+  .c-best{background:#EEF5EE;border:1px solid #CDE3CD}.c-best .t{color:#2F6E34;font-weight:800;margin-bottom:4px}
+  .c-warn{background:#FEF6EE;border:1px solid #F5D9C2}.c-warn .t{color:var(--accent-d);font-weight:800;margin-bottom:4px}
+  .c-info{background:#EAF1F8;border:1px solid #CFE0F0}.c-info .t{color:#2F5C8A;font-weight:800;margin-bottom:4px}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px;margin-left:6px}
+  .tag.win{background:#EAF1F8;color:#2F5C8A;border:1px solid #CFE0F0}
+  .tag.mac{background:#F1EEF8;color:#5b4a8a;border:1px solid #d8cfe8}
+  .tag.web{background:#FBF1DF;color:#946516;border:1px solid #ECCA8F}
+  .tag.univ{background:#EEF5EE;color:#2F6E34;border:1px solid #CDE3CD}
+  footer{background:var(--card);padding:16px 48px;color:var(--grey);font-size:12.5px;text-align:center;border-top:3px solid var(--accent)}
+  .toolbar{max-width:900px;margin:0 auto;padding:10px 0;text-align:right}
+  .pbtn{background:var(--accent);color:#fff;border:none;font-family:inherit;font-weight:700;font-size:14px;padding:9px 18px;border-radius:8px;cursor:pointer}
+  @media print{body{background:#fff}.toolbar{display:none}.doc{box-shadow:none;margin:0;max-width:none}section{page-break-inside:avoid}}
+  @media(max-width:680px){.cover,.content,footer{padding-left:22px;padding-right:22px}}
+</style>
+</head>
+<body>
+<div class="toolbar"><button class="pbtn" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button></div>
+<div class="doc">
+  <div class="cover">
+    <span class="k">FORMATION CLAUDE COWORK · EA PHARMA</span>
+    <h1>Importer les <span class="o">boîtes de démo</span> dans votre messagerie</h1>
+    <p>Des mails 100 % factices et anonymisés, pour tester le tri et la rédaction sans jamais toucher à vos vrais mails. Une boîte par métier, à intégrer dans le client de votre choix — ou à lire directement, sans rien importer.</p>
+  </div>
+
+  <div class="content">
+
+    <!-- intro -->
+    <section>
+      <h2><span class="n">→</span>Le principe</h2>
+      <div class="callout c-best">
+        <div class="t">✅ But : travailler avec le connecteur mail</div>
+        On <b>importe ces boîtes de démo dans votre messagerie</b> (dans un dossier de test dédié), puis Claude Cowork les lit via le <b>connecteur mail</b> — comme avec vos vrais e-mails, mais sur des données 100 % factices. Suivez la section correspondant à votre client mail ci-dessous.
+      </div>
+    </section>
+
+    <!-- formats -->
+    <section>
+      <h2><span class="n">1</span>Les formats fournis &amp; quel client les accepte</h2>
+      <p>Trois formats sont livrés dans le dossier <code>_distribution</code> (et les <code>.mbox</code> dans <code>_import_mac_mail</code>) :</p>
+      <ul>
+        <li><b>.eml</b> — un fichier = un mail. Idéal pour le glisser-déposer dans les clients <b>bureau</b>.</li>
+        <li><b>.mbox</b> — une boîte entière en un fichier. Format d'import d'Apple Mail et de Thunderbird.</li>
+        <li><b>.zip</b> — les <code>.eml</code> regroupés par métier (à décompresser avant usage).</li>
+      </ul>
+      <table>
+        <tr><th>Client mail</th><th>Import de fichiers ?</th><th>Format à utiliser</th></tr>
+        <tr><td><b>Apple Mail</b> (Mac)</td><td class="ok">Oui</td><td>.mbox (ou glisser des .eml)</td></tr>
+        <tr><td><b>Outlook classique</b> (Windows)</td><td class="ok">Oui</td><td>glisser les .eml dans un dossier</td></tr>
+        <tr><td><b>Outlook</b> (Mac)</td><td class="ok">Oui</td><td>glisser les .eml dans un dossier local</td></tr>
+        <tr><td><b>Thunderbird</b> (gratuit, Win/Mac)</td><td class="ok">Oui</td><td>.mbox ou .eml (module ImportExportTools NG)</td></tr>
+        <tr><td><b>Nouveau Outlook</b> / <b>Outlook Web</b></td><td class="no">Non (pas d'import fichier)</td><td>→ méthode « pont » Thunderbird</td></tr>
+        <tr><td><b>Gmail</b> (web)</td><td class="no">Non (pas d'import fichier)</td><td>→ méthode « pont » Thunderbird</td></tr>
+      </table>
+      <div class="callout c-warn">
+        <div class="t">⚠️ Important</div>
+        Les webmails (Gmail, Outlook Web, nouveau Outlook) <b>ne permettent pas d'importer un fichier de mails</b>. Pour les intégrer à ces comptes, utilisez la <b>méthode « pont » Thunderbird</b> (dernière section) : elle pousse les mails dans le compte via IMAP, où le connecteur Cowork les retrouve.
+      </div>
+    </section>
+
+    <!-- Apple Mail -->
+    <section>
+      <h2><span class="n">2</span>Apple Mail <span class="tag mac">macOS</span></h2>
+      <ol>
+        <li>Décompressez <code>TOUS_metiers_mbox.zip</code> (ou repérez le dossier <code>_import_mac_mail</code>).</li>
+        <li>Dans Mail : menu <b>Boîte aux lettres → Importer des boîtes aux lettres…</b></li>
+        <li>Choisissez <b>« Fichiers au format mbox »</b>, puis Continuer.</li>
+        <li>Sélectionnez le dossier contenant les <code>.mbox</code> (ou un fichier précis, ex. <code>03_Sales_Reception.mbox</code>).</li>
+        <li>Mail crée un dossier <b>Import</b> dans la barre latérale. Glissez-le sous <b>« Sur mon Mac »</b> et renommez-le (ex. « Démo Sales »).</li>
+      </ol>
+      <p><b>Variante glisser-déposer :</b> créez une boîte locale (Sur mon Mac → clic droit → Nouvelle boîte), puis faites glisser les <code>.eml</code> décompressés dedans.</p>
+    </section>
+
+    <!-- Outlook desktop -->
+    <section>
+      <h2><span class="n">3</span>Outlook (application bureau) <span class="tag win">Windows</span> <span class="tag mac">Mac</span></h2>
+      <p>Vrai pour l'<b>Outlook classique</b> (pas le « nouvel Outlook » — voir section 5).</p>
+      <ol>
+        <li>Dans Outlook, créez un dossier de test : clic droit sur votre boîte → <b>Nouveau dossier</b> (ex. « Démo Cowork »).</li>
+        <li>Ouvrez l'Explorateur (Windows) ou le Finder (Mac) sur les <code>.eml</code> décompressés.</li>
+        <li><b>Sélectionnez les fichiers et faites-les glisser</b> directement dans le dossier « Démo Cowork » d'Outlook.</li>
+        <li>Ils apparaissent comme des mails reçus normaux, prêts pour le test.</li>
+      </ol>
+      <div class="callout c-info">
+        <div class="t">Astuce</div>
+        Si Outlook est relié à un compte <b>Exchange / Microsoft 365</b>, les mails glissés dans un dossier en ligne se <b>synchronisent aussi vers la version web</b> du même compte.
+      </div>
+    </section>
+
+    <!-- Thunderbird -->
+    <section>
+      <h2><span class="n">4</span>Thunderbird <span class="tag univ">universel · gratuit</span></h2>
+      <p>Thunderbird (gratuit, Windows &amp; Mac) est le couteau suisse : il lit <b>.eml et .mbox</b>, et sert aussi de « pont » vers n'importe quel compte (section 6).</p>
+      <ol>
+        <li>Installez le module <b>ImportExportTools NG</b> (Menu → Modules → chercher « ImportExportTools »).</li>
+        <li>Créez un dossier local : clic droit sur <b>Dossiers locaux → Nouveau dossier</b>.</li>
+        <li>Clic droit sur ce dossier → <b>ImportExportTools NG → Importer des messages</b> (pour des <code>.eml</code>) ou <b>Importer un fichier mbox</b>.</li>
+        <li>Sélectionnez les fichiers du métier voulu. Les mails apparaissent dans le dossier.</li>
+      </ol>
+    </section>
+
+    <!-- Nouveau Outlook / web -->
+    <section>
+      <h2><span class="n">5</span>Nouveau Outlook &amp; Outlook Web <span class="tag web">navigateur / app récente</span></h2>
+      <p>Ces versions <b>n'ont pas d'import de fichiers</b>. Pour intégrer les mails au compte, utilisez la <b>méthode « pont » Thunderbird</b> (section suivante) : elle pousse les mails vers le compte via IMAP — ils apparaissent alors dans le nouvel Outlook / Outlook Web, où le connecteur Cowork les lit.</p>
+    </section>
+
+    <!-- Gmail / pont -->
+    <section>
+      <h2><span class="n">6</span>Gmail (web) &amp; méthode « pont » universelle <span class="tag univ">marche partout</span></h2>
+      <p>Gmail web n'importe pas non plus de fichiers <code>.eml</code>/<code>.mbox</code>. La méthode « pont » fait apparaître les mails dans <b>n'importe quel compte</b> (Gmail, Outlook, autre) en passant par Thunderbird et la synchronisation IMAP :</p>
+      <ol>
+        <li>Dans Thunderbird, <b>ajoutez le compte mail</b> du participant (Gmail / Outlook…) en <b>IMAP</b> (Thunderbird configure tout automatiquement à partir de l'adresse).</li>
+        <li>Importez les <code>.eml</code>/<code>.mbox</code> dans un <b>dossier local</b> (section 4).</li>
+        <li>Dans le compte IMAP, créez un dossier « Démo Cowork ».</li>
+        <li><b>Glissez (ou copiez) les mails</b> du dossier local vers ce dossier « Démo Cowork » du compte IMAP.</li>
+        <li>Thunderbird <b>téléverse</b> les mails sur le serveur : ils apparaissent dans Gmail / Outlook web, sur tous les appareils.</li>
+      </ol>
+      <div class="callout c-warn">
+        <div class="t">⚠️ Gmail &amp; sécurité</div>
+        Pour ajouter un compte Gmail à Thunderbird, la connexion se fait via la fenêtre Google habituelle (OAuth). <b>Le participant saisit lui-même ses identifiants</b> — ne les communiquez à personne.
+      </div>
+    </section>
+
+    <!-- rappels -->
+    <section>
+      <h2><span class="n">7</span>À retenir</h2>
+      <ul>
+        <li>Ces mails sont <b>importés</b>, pas « reçus » : ils n'arrivent pas par le réseau (c'est voulu — aucun vrai envoi).</li>
+        <li>Tout est <b>factice et anonyme</b> (clients A→F, références Ref-001→008, personnes fictives) : zéro donnée sensible.</li>
+        <li>Mettez-les dans un <b>dossier dédié et clairement nommé</b> (ex. « Démo Cowork »), jamais mélangés à de vrais mails.</li>
+        <li><b>Cadrez chaque prompt sur ce dossier :</b> commencez par <i>« Travaille uniquement sur le dossier « Démo Cowork », ne touche pas à ma boîte de réception ni à mes autres dossiers. »</i></li>
+        <li>Si le connecteur le permet, <b>limitez son périmètre</b> au seul dossier de démo le temps de l'exercice.</li>
+        <li><b>Règle d'or :</b> on ne laisse rien <b>envoyer, déplacer ni supprimer</b> sans validation humaine, même en test.</li>
+        <li><b>Après l'atelier</b>, supprimez le dossier de démo : vos vrais mails n'auront jamais été concernés.</li>
+      </ul>
+    </section>
+
+  </div>
+  <footer>Formation Claude Cowork · EA Pharma — Tutoriel d'import des boîtes de démo · Document de travail · 100 % hors-ligne</footer>
+</div>
+</body>
+</html>
